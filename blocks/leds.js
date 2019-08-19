@@ -42,7 +42,7 @@ Blockly.Blocks['chainable_rgb_led_set'] = {
     this.appendValueInput("LED_ID")
         .setCheck("Number");
     this.appendDummyInput()
-        .appendField("to color ");
+        .appendField("to colour ");
     this.appendValueInput("COLOUR")
         .setCheck("Colour");
     this.setInputsInline(true);
