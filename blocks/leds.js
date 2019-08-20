@@ -2,7 +2,7 @@
  * @license
  * Visual Blocks Editor
  *
- * opyright 2012 Google Inc.
+ * Copyright 2012 Google Inc.
  * Copyright 2019 Rovercode
  * https://developers.google.com/blockly/
  *
@@ -20,7 +20,7 @@
  */
 
 /**
- * @fileoverview Motor blocks for Blockly.
+ * @fileoverview LED blocks for Blockly.
  * @author brady.hurlburt@rovercode.com (Brady L. Hurlburt)
  */
 'use strict';
@@ -42,7 +42,7 @@ Blockly.Blocks['chainable_rgb_led_set'] = {
     this.appendValueInput("LED_ID")
         .setCheck("Number");
     this.appendDummyInput()
-        .appendField("to colour ");
+        .appendField("to color ");
     this.appendValueInput("COLOUR")
         .setCheck("Colour");
     this.setInputsInline(true);

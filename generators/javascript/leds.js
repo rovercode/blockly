@@ -20,7 +20,7 @@
  */
 
 /**
- * @fileoverview Generating JavaScript for motor blocks.
+ * @fileoverview Generating JavaScript for LED blocks.
  * @author brady.hurlburt@rovercode.com (Brady L. Hurlburt)
  */
 'use strict';
