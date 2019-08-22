@@ -33,7 +33,7 @@ goog.require('Blockly.Blocks');
 /**
  * Common HSV hue for all blocks in this category.
  */
-Blockly.Blocks.leds.HUE = 77;
+Blockly.Blocks.leds.HUE = 20;
 
 Blockly.Blocks['chainable_rgb_led_set'] = {
   init: function() {
