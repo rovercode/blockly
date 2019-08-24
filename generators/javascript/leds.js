@@ -33,6 +33,12 @@ Blockly.JavaScript['chainable_rgb_led_set'] = function(block) {
   console.log(block);
   var ledId = Blockly.JavaScript.valueToCode(block, 'LED_ID', Blockly.JavaScript.ORDER_ATOMIC);
   var colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
+  if (!ledId) {
+    ledId = 'null';
+  }
+  if (!colour) {
+    colour = 'null';
+  }
   var code = "setChainableRgbLed(" + ledId + ", " + colour + ");";
   return code;
 };
