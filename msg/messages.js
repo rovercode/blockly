@@ -159,8 +159,8 @@ Blockly.Msg.COLOUR_RANDOM_HELPURL = 'http://randomcolour.com';
 Blockly.Msg.COLOUR_RANDOM_TITLE = 'random colour';
 /// tooltip - See [https://github.com/google/blockly/wiki/Colour#generating-a-random-colour https://github.com/google/blockly/wiki/Colour#generating-a-random-colour].
 Blockly.Msg.COLOUR_RANDOM_TOOLTIP = 'Choose a colour at random.';
-/// {{Optional}} url - A link for color codes with percentages (0-100%) for each component, instead of the more common 0-255, which may be more difficult for beginners.
-Blockly.Msg.COLOUR_RGB_HELPURL = 'http://www.december.com/html/spec/colorper.html';
+/// {{Optional}} url - A link for colour codes with percentages (0-100%) for each component, instead of the more common 0-255, which may be more difficult for beginners.
+Blockly.Msg.COLOUR_RGB_HELPURL = 'https://www.december.com/html/spec/colorpercompact.html';
 /// block text - Title of block for [https://github.com/google/blockly/wiki/Colour#creating-a-colour-from-red-green-and-blue-components https://github.com/google/blockly/wiki/Colour#creating-a-colour-from-red-green-and-blue-components].
 Blockly.Msg.COLOUR_RGB_TITLE = 'colour with';
 /// block input text - The amount of red (from 0 to 100) to use when [https://github.com/google/blockly/wiki/Colour#creating-a-colour-from-red-green-and-blue-components https://github.com/google/blockly/wiki/Colour#creating-a-colour-from-red-green-and-blue-components].\n{{Identical|Red}}
@@ -171,15 +171,15 @@ Blockly.Msg.COLOUR_RGB_GREEN = 'green';
 Blockly.Msg.COLOUR_RGB_BLUE = 'blue';
 /// tooltip - See [https://github.com/google/blockly/wiki/Colour#creating-a-colour-from-red-green-and-blue-components https://github.com/google/blockly/wiki/Colour#creating-a-colour-from-red-green-and-blue-components].
 Blockly.Msg.COLOUR_RGB_TOOLTIP = 'Create a colour with the specified amount of red, green, and blue. All values must be between 0 and 100.';
-/// {{Optional}} url - A useful link that displays blending of two colors.
-Blockly.Msg.COLOUR_BLEND_HELPURL = 'http://meyerweb.com/eric/tools/color-blend/';
+/// {{Optional}} url - A useful link that displays blending of two colours.
+Blockly.Msg.COLOUR_BLEND_HELPURL = 'https://meyerweb.com/eric/tools/color-blend/#:::rgbp';
 /// block text - A verb for blending two shades of paint.
 Blockly.Msg.COLOUR_BLEND_TITLE = 'blend';
 /// block input text - The first of two colours to [https://github.com/google/blockly/wiki/Colour#blending-colours blend].
 Blockly.Msg.COLOUR_BLEND_COLOUR1 = 'colour 1';
 /// block input text - The second of two colours to [https://github.com/google/blockly/wiki/Colour#blending-colours blend].
 Blockly.Msg.COLOUR_BLEND_COLOUR2 = 'colour 2';
-/// block input text - The proportion of the [https://github.com/google/blockly/wiki/Colour#blending-colours blend] containing the first color; the remaining proportion is of the second colour.  For example, if the first colour is red and the second color blue, a ratio of 1 would yield pure red, a ratio of .5 would yield purple (equal amounts of red and blue), and a ratio of 0 would yield pure blue.\n{{Identical|Ratio}}
+/// block input text - The proportion of the [https://github.com/google/blockly/wiki/Colour#blending-colours blend] containing the first colour; the remaining proportion is of the second colour.  For example, if the first colour is red and the second colour blue, a ratio of 1 would yield pure red, a ratio of .5 would yield purple (equal amounts of red and blue), and a ratio of 0 would yield pure blue.\n{{Identical|Ratio}}
 Blockly.Msg.COLOUR_BLEND_RATIO = 'ratio';
 /// tooltip - See [https://github.com/google/blockly/wiki/Colour#blending-colours https://github.com/google/blockly/wiki/Colour#blending-colours].
 Blockly.Msg.COLOUR_BLEND_TOOLTIP = 'Blends two colours together with a given ratio (0.0 - 1.0).';
@@ -556,6 +556,13 @@ Blockly.Msg.MATH_RANDOM_FLOAT_HELPURL = 'https://en.wikipedia.org/wiki/Random_nu
 Blockly.Msg.MATH_RANDOM_FLOAT_TITLE_RANDOM = 'random fraction';
 /// tooltip - Return a random fraction between 0 and 1.  The value may be equal to 0 but must be less than 1.
 Blockly.Msg.MATH_RANDOM_FLOAT_TOOLTIP = 'Return a random fraction between 0.0 (inclusive) and 1.0 (exclusive).';
+
+/// {{Optional}} url - Information about how to calculate atan2.
+Blockly.Msg.MATH_ATAN2_HELPURL = 'https://en.wikipedia.org/wiki/Atan2';
+/// block text - The title of the block that calculates atan2 of point (X, Y).  For example, if the point is (-1, -1), this returns -135. %1 is a placeholder for the X coordinate, %2 is the placeholder for the Y coordinate.
+Blockly.Msg.MATH_ATAN2_TITLE = 'atan2 of X:%1 Y:%2';
+/// tooltip - Return the arctangent of point (X, Y) in degrees from -180 to 180. For example, if the point is (-1, -1) this returns -135.
+Blockly.Msg.MATH_ATAN2_TOOLTIP = 'Return the arctangent of point (X, Y) in degrees from -180 to 180.';
 
 // Text Blocks.
 /// {{Optional}} url - Information about how computers represent text (sometimes referred to as ''string''s).
@@ -1199,3 +1206,8 @@ Blockly.Msg.PROCEDURES_IFRETURN_WARNING = 'Warning: This block may be used only 
 /// comment text - This text appears in a new workspace comment, to hint that
 /// the user can type here.
 Blockly.Msg.WORKSPACE_COMMENT_DEFAULT_TEXT = 'Say something...';
+
+/// warning - This appears if the user collapses a block, and blocks inside
+/// that block have warnings attached to them. It should inform the user that the
+/// block they collapsed contains blocks that have warnings.
+Blockly.Msg.COLLAPSED_WARNINGS_WARNING = 'Collapsed blocks contain warnings.';

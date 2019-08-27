@@ -26,12 +26,14 @@
 
 goog.provide('Blockly.WorkspaceComment');
 
+goog.require('Blockly.Events');
 goog.require('Blockly.Events.CommentChange');
 goog.require('Blockly.Events.CommentCreate');
 goog.require('Blockly.Events.CommentDelete');
 goog.require('Blockly.Events.CommentMove');
-
-goog.require('goog.math.Coordinate');
+goog.require('Blockly.utils');
+goog.require('Blockly.utils.Coordinate');
+goog.require('Blockly.utils.xml');
 
 
 /**
@@ -54,10 +56,10 @@ Blockly.WorkspaceComment = function(workspace, content, height, width, opt_id) {
   /**
    * The comment's position in workspace units.  (0, 0) is at the workspace's
    * origin; scale does not change this value.
-   * @type {!goog.math.Coordinate}
+   * @type {!Blockly.utils.Coordinate}
    * @protected
    */
-  this.xy_ = new goog.math.Coordinate(0, 0);
+  this.xy_ = new Blockly.utils.Coordinate(0, 0);
 
   /**
    * The comment's height in workspace units.  Scale does not change this value.
@@ -98,7 +100,7 @@ Blockly.WorkspaceComment = function(workspace, content, height, width, opt_id) {
 
   /**
    * @protected
-   * @type {!string}
+   * @type {string}
    */
   this.content_ = content;
 
@@ -135,7 +137,7 @@ Blockly.WorkspaceComment.prototype.dispose = function() {
 
 /**
  * Get comment height.
- * @return {number} comment height.
+ * @return {number} Comment height.
  * @package
  */
 Blockly.WorkspaceComment.prototype.getHeight = function() {
@@ -144,7 +146,7 @@ Blockly.WorkspaceComment.prototype.getHeight = function() {
 
 /**
  * Set comment height.
- * @param {number} height comment height.
+ * @param {number} height Comment height.
  * @package
  */
 Blockly.WorkspaceComment.prototype.setHeight = function(height) {
@@ -153,7 +155,7 @@ Blockly.WorkspaceComment.prototype.setHeight = function(height) {
 
 /**
  * Get comment width.
- * @return {number} comment width.
+ * @return {number} Comment width.
  * @package
  */
 Blockly.WorkspaceComment.prototype.getWidth = function() {
@@ -171,12 +173,12 @@ Blockly.WorkspaceComment.prototype.setWidth = function(width) {
 
 /**
  * Get stored location.
- * @return {!goog.math.Coordinate} The comment's stored location.  This is not
- *     valid if the comment is currently being dragged.
+ * @return {!Blockly.utils.Coordinate} The comment's stored location.
+ *   This is not valid if the comment is currently being dragged.
  * @package
  */
 Blockly.WorkspaceComment.prototype.getXY = function() {
-  return this.xy_.clone();
+  return new Blockly.utils.Coordinate(this.xy_.x, this.xy_.y);
 };
 
 /**
@@ -254,7 +256,7 @@ Blockly.WorkspaceComment.prototype.setContent = function(content) {
 
 /**
  * Encode a comment subtree as XML with XY coordinates.
- * @param {boolean=} opt_noId True if the encoder should skip the comment id.
+ * @param {boolean=} opt_noId True if the encoder should skip the comment ID.
  * @return {!Element} Tree of XML elements.
  * @package
  */
@@ -271,14 +273,14 @@ Blockly.WorkspaceComment.prototype.toXmlWithXY = function(opt_noId) {
  * Encode a comment subtree as XML, but don't serialize the XY coordinates.
  * This method avoids some expensive metrics-related calls that are made in
  * toXmlWithXY().
- * @param {boolean=} opt_noId True if the encoder should skip the comment id.
+ * @param {boolean=} opt_noId True if the encoder should skip the comment ID.
  * @return {!Element} Tree of XML elements.
  * @package
  */
 Blockly.WorkspaceComment.prototype.toXml = function(opt_noId) {
-  var commentElement = goog.dom.createDom('comment');
+  var commentElement = Blockly.utils.xml.createElement('comment');
   if (!opt_noId) {
-    commentElement.setAttribute('id', this.id);
+    commentElement.id = this.id;
   }
   commentElement.textContent = this.getContent();
   return commentElement;
@@ -331,7 +333,8 @@ Blockly.WorkspaceComment.fromXml = function(xmlComment, workspace) {
 /**
  * Decode an XML comment tag and return the results in an object.
  * @param {!Element} xml XML comment element.
- * @return {!Object} An object containing the information about the comment.
+ * @return {{w: number, h: number, x: number, y: number, content: string}} An
+ *     object containing the id, size, position, and comment string.
  * @package
  */
 Blockly.WorkspaceComment.parseAttributes = function(xml) {
@@ -339,32 +342,23 @@ Blockly.WorkspaceComment.parseAttributes = function(xml) {
   var xmlW = xml.getAttribute('w');
 
   return {
-    /* @type {string} */
+    // @type {string}
     id: xml.getAttribute('id'),
-    /**
-     * The height of the comment in workspace units, or 100 if not specified.
-     * @type {number}
-     */
+    // The height of the comment in workspace units, or 100 if not specified.
+    // @type {number}
     h: xmlH ? parseInt(xmlH, 10) : 100,
-    /**
-     * The width of the comment in workspace units, or 100 if not specified.
-     * @type {number}
-     */
+    // The width of the comment in workspace units, or 100 if not specified.
+    // @type {number}
     w: xmlW ? parseInt(xmlW, 10) : 100,
-    /**
-     * The x position of the comment in workspace coordinates, or NaN if not
-     * specified in the XML.
-     * @type {number}
-     */
+    // The x position of the comment in workspace coordinates, or NaN if not
+    // specified in the XML.
+    // @type {number}
     x: parseInt(xml.getAttribute('x'), 10),
-    /**
-     * The y position of the comment in workspace coordinates, or NaN if not
-     * specified in the XML.
-     * @type {number}
-     */
+    // The y position of the comment in workspace coordinates, or NaN if not
+    // specified in the XML.
+    // @type {number}
     y: parseInt(xml.getAttribute('y'), 10),
-    /* @type {string} */
+    // @type {string}
     content: xml.textContent
   };
 };
-
