@@ -21,7 +21,7 @@
 
 /**
  * @fileoverview Sensors blocks for Blockly.
- * @author bradyhurlburt@gmail.com (Brady L. Hurlburt)
+ * @author brady.hurlburt@gmail.com (Brady L. Hurlburt)
  */
 'use strict';
 

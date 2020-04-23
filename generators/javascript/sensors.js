@@ -21,7 +21,7 @@
 
 /**
  * @fileoverview Generating JavaScript for sensor blocks.
- * @author bradyhurlburt@gmail.com (Brady L. Hurlburt)
+ * @author brady.hurlburt@gmail.com (Brady L. Hurlburt)
  */
 'use strict';
 

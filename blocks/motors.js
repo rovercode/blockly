@@ -21,7 +21,7 @@
 
 /**
  * @fileoverview Motor blocks for Blockly.
- * @author bradyhurlburt@rovercode.com (Brady L. Hurlburt)
+ * @author brady.hurlburt@rovercode.com (Brady L. Hurlburt)
  */
 'use strict';
 
