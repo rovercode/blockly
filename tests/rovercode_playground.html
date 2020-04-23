@@ -405,9 +405,13 @@ h1 {
   Variables category uses untyped variable blocks.
   See https://developers.google.com/blockly/guides/create-custom-blocks/variables#untyped_variable_blocks for more information. -->
   <xml id="toolbox-categories" style="display: none">
-    <category name="Rovercode">
+    <category name="motors" colour="42">
       <block type="motors_start"></block>
-      <block type="chainable_rgb_led_set"></block>
+      <block type="motors_stop"></block>
+    </category>
+    <category name="sensors and buttons" colour="160">
+      <block type="light_sensor_value"></block>
+      <block type="button_press"></block>
     </category>
     <category name="Logic" colour="%{BKY_LOGIC_HUE}">
       <block type="controls_if"></block>
