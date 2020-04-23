@@ -16,3 +16,4 @@ gulpfile.js
 /appengine/*
 /externs/*
 /closure/*
+/tests/rovercode-all-output.js

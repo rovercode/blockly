@@ -58,7 +58,7 @@ Blockly.Blocks['motors_stop'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("stop")
-        .appendField(new Blockly.FieldDropdown([["left motor", "LEFT"], ["right motor", "RIGHT"], ["both motors", "BOTH"]]), "MOTOR")
+        .appendField(new Blockly.FieldDropdown([["left motor", "LEFT"], ["right motor", "RIGHT"], ["both motors", "BOTH"]]), "MOTOR");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
