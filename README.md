@@ -1,5 +1,14 @@
 # Blockly [![Build Status]( https://travis-ci.org/google/blockly.svg?branch=master)](https://travis-ci.org/google/blockly)
 
+## Quick Usage
+
+```bash
+> n lts
+> npm install
+> npm run build
+> google-chrome tests/rovercode_playground.html
+> # import tests/rovercode-all.xml. Generate javascript and compare to tests/rovercode-all-output.js
+```
 
 Google's Blockly is a web-based, visual programming editor.  Users can drag
 blocks together to build programs.  All code is free and open source.

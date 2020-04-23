@@ -49,8 +49,8 @@ Blockly.Blocks['motors_start'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.motors.HUE);
-    this.setTooltip('Set the speed and direction of a motor');
-    this.setHelpUrl('http://www.rovercode.org/ref/set_motor');
+    this.setTooltip('Set the speed and direction of one or both motors. 0 is stopped; 100 is max speed.');
+    this.setHelpUrl('https://docs.rovercode.com/blocks/motors-start');
   }
 };
 
@@ -63,7 +63,7 @@ Blockly.Blocks['motors_stop'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.motors.HUE);
-    this.setTooltip('Stop a motor');
-    this.setHelpUrl('http://www.example.com/');
+    this.setTooltip('Stop one or both motor');
+    this.setHelpUrl('https://docs.rovercode.com/blocks/motors-stop');
   }
 };
