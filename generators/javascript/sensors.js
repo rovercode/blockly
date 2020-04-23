@@ -34,3 +34,9 @@ Blockly.JavaScript['sensors_get_covered'] = function(block) {
   var code = "getSensorCovered('"+dropdown_sensors+"')";
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['light_sensor_value'] = function(block) {
+  var dropdown_sensors = block.getFieldValue('SENSORS');
+  var code = "getLightSensorValue('" + dropdown_sensors + "')";
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
