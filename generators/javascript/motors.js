@@ -21,7 +21,7 @@
 
 /**
  * @fileoverview Generating JavaScript for motor blocks.
- * @author brady.hurlburt@gmail.com (Brady L. Hurlburt)
+ * @author brady.hurlburt@rovercode.com (Brady L. Hurlburt)
  */
 'use strict';
 
