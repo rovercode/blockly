@@ -40,3 +40,9 @@ Blockly.JavaScript['light_sensor_value'] = function(block) {
   var code = "getLightSensorValue('" + dropdown_sensors + "')";
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['button_press'] = function(block) {
+  var dropdown_button = block.getFieldValue('BUTTON');
+  var code = "buttonHasBeenPressed('" + dropdown_button + "')";
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};

@@ -60,3 +60,16 @@ Blockly.Blocks['light_sensor_value'] = {
     this.setHelpUrl("https://docs.rovercode.com/blocks/light-sensor-value");
   }
 };
+
+Blockly.Blocks['button_press'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("button")
+        .appendField(new Blockly.FieldDropdown([["A","A"], ["B","B"]]), "BUTTON")
+        .appendField("has been pressed");
+    this.setOutput(true, "Boolean");
+    this.setColour(Blockly.Blocks.sensors.HUE);
+    this.setTooltip("Returns true if the button has been pressed since the last time you asked.");
+    this.setHelpUrl("https://docs.rovercode.com/blocks/button-press");
+  }
+};
