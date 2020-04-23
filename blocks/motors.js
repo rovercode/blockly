@@ -21,7 +21,7 @@
 
 /**
  * @fileoverview Motor blocks for Blockly.
- * @author bradyhurlburt@gmail.com (Brady L. Hurlburt)
+ * @author bradyhurlburt@rovercode.com (Brady L. Hurlburt)
  */
 'use strict';
 
@@ -39,8 +39,8 @@ Blockly.Blocks['motors_start'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("turn on")
-        .appendField(new Blockly.FieldDropdown([["left", "LEFT"], ["right", "RIGHT"]]), "MOTOR")
-        .appendField("motor, going ")
+        .appendField(new Blockly.FieldDropdown([["left motor", "LEFT"], ["right motor", "RIGHT"], ["both motors", "BOTH"]]), "MOTOR")
+        .appendField("going")
         .appendField(new Blockly.FieldDropdown([["forward", "FORWARD"], ["backward", "BACKWARD"]]), "DIRECTION")
         .appendField("at speed");
     this.appendValueInput("SPEED")
@@ -58,8 +58,7 @@ Blockly.Blocks['motors_stop'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("stop")
-        .appendField(new Blockly.FieldDropdown([["left", "LEFT"], ["right", "RIGHT"]]), "MOTOR")
-        .appendField("motor");
+        .appendField(new Blockly.FieldDropdown([["left motor", "LEFT"], ["right motor", "RIGHT"], ["both motors", "BOTH"]]), "MOTOR")
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
