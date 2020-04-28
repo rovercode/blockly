@@ -9,3 +9,4 @@ a = (buttonHasBeenPressed('A'));
 displayMessage(String('Sup'));
 displayMessage(String(123));
 displayMessage(String(true));
+displayMessage(String(a));

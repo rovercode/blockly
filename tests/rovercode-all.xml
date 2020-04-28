@@ -54,6 +54,15 @@
                                     <field name="BOOL">TRUE</field>
                                   </block>
                                 </value>
+                                <next>
+                                  <block type="display_message" id="_3EPhV8yZ4t}Jz*PeZzO">
+                                    <value name="MESSAGE">
+                                      <block type="variables_get" id="`clK%Ak-Z#-Y=1Q?:E)e">
+                                        <field name="VAR" id="xyU[WYTytR`!H9r1MgTl">a</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
                               </block>
                             </next>
                           </block>
