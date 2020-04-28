@@ -11,7 +11,7 @@ blocks_size_expected=76500 # 75K in July 2019 release
 # Size of blockly_compressed.js.gz
 blockly_gz_size_expected=123000 # 180K in July 2019 release
 # Size of blocks_compressed.js.gz
-blocks_gz_size_expected=15200 # 14.5K in July 2019 release
+blocks_gz_size_expected=16741 # 14.5K in July 2019 release
 
 # ANSI colors
 BOLD_GREEN='\033[1;32m'
