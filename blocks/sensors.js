@@ -52,7 +52,7 @@ Blockly.Blocks['sensors_get_covered'] = {
 Blockly.Blocks['light_sensor_value'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["left","LEFT"], ["right","RIGHT"]]), "SENSORS")
+        .appendField(new Blockly.FieldDropdown([["left","LEFT"], ["right","RIGHT"]]), "SENSOR")
         .appendField("light sensor value");
     this.setOutput(true, "Number");
     this.setTooltip("Get the brightness value from a light sensor. 0 is darkest; 1023 is brightest.");

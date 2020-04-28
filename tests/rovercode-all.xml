@@ -22,7 +22,7 @@
                 <field name="VAR" id="xyU[WYTytR`!H9r1MgTl">a</field>
                 <value name="VALUE">
                   <block type="light_sensor_value" id="QW4P17vVgaRaQ=36S(pT">
-                    <field name="SENSORS">LEFT</field>
+                    <field name="SENSOR">LEFT</field>
                   </block>
                 </value>
                 <next>
