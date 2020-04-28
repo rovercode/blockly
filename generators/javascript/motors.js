@@ -21,7 +21,7 @@
 
 /**
  * @fileoverview Generating JavaScript for motor blocks.
- * @author bradyhurlburt@gmail.com (Brady L. Hurlburt)
+ * @author brady.hurlburt@rovercode.com (Brady L. Hurlburt)
  */
 'use strict';
 
@@ -35,15 +35,15 @@ Blockly.JavaScript['motors_start'] = function(block) {
   var value_speed = Blockly.JavaScript.valueToCode(block, 'SPEED', Blockly.JavaScript.ORDER_ATOMIC);
   var code = "setMotor('" + dropdown_motor + "', '" + dropdown_direction + "'";
   if (value_speed && isNaN(parseInt(value_speed))) {
-    code += ", " + value_speed + ".toString());";
+    code += ", " + value_speed + ".toString());\n";
   } else {
-    code += ", '" + value_speed + "');";
+    code += ", '" + value_speed + "');\n";
   }
   return code;
 };
 
 Blockly.JavaScript['motors_stop'] = function(block) {
   var dropdown_motor = block.getFieldValue('MOTOR');
-  var code = "stopMotor('"+dropdown_motor+"');";
+  var code = "stopMotor('"+dropdown_motor+"');\n";
   return code;
 };

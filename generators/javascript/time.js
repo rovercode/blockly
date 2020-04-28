@@ -21,7 +21,7 @@
 
 /**
  * @fileoverview Generating JavaScript for time blocks.
- * @author bradyhurlburt@gmail.com (Brady L. Hurlburt)
+ * @author brady.hurlburt@rovercode.com (Brady L. Hurlburt)
  */
 'use strict';
 

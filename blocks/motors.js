@@ -21,7 +21,7 @@
 
 /**
  * @fileoverview Motor blocks for Blockly.
- * @author bradyhurlburt@gmail.com (Brady L. Hurlburt)
+ * @author brady.hurlburt@rovercode.com (Brady L. Hurlburt)
  */
 'use strict';
 
@@ -39,8 +39,8 @@ Blockly.Blocks['motors_start'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("turn on")
-        .appendField(new Blockly.FieldDropdown([["left", "LEFT"], ["right", "RIGHT"]]), "MOTOR")
-        .appendField("motor, going ")
+        .appendField(new Blockly.FieldDropdown([["left motor", "LEFT"], ["right motor", "RIGHT"], ["both motors", "BOTH"]]), "MOTOR")
+        .appendField("going")
         .appendField(new Blockly.FieldDropdown([["forward", "FORWARD"], ["backward", "BACKWARD"]]), "DIRECTION")
         .appendField("at speed");
     this.appendValueInput("SPEED")
@@ -49,8 +49,8 @@ Blockly.Blocks['motors_start'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.motors.HUE);
-    this.setTooltip('Set the speed and direction of a motor');
-    this.setHelpUrl('http://www.rovercode.org/ref/set_motor');
+    this.setTooltip('Set the speed and direction of one or both motors. 0 is stopped; 100 is max speed.');
+    this.setHelpUrl('https://docs.rovercode.com/blocks/motors-start');
   }
 };
 
@@ -58,13 +58,12 @@ Blockly.Blocks['motors_stop'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("stop")
-        .appendField(new Blockly.FieldDropdown([["left", "LEFT"], ["right", "RIGHT"]]), "MOTOR")
-        .appendField("motor");
+        .appendField(new Blockly.FieldDropdown([["left motor", "LEFT"], ["right motor", "RIGHT"], ["both motors", "BOTH"]]), "MOTOR");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.motors.HUE);
-    this.setTooltip('Stop a motor');
-    this.setHelpUrl('http://www.example.com/');
+    this.setTooltip('Stop one or both motor');
+    this.setHelpUrl('https://docs.rovercode.com/blocks/motors-stop');
   }
 };
