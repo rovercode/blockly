@@ -7,6 +7,7 @@
 <script src="../generators/javascript.js"></script>
 <script src="../generators/javascript/logic.js"></script>
 <script src="../generators/javascript/motors.js"></script>
+<script src="../generators/javascript/time.js"></script>
 <script src="../generators/javascript/sensors.js"></script>
 <script src="../generators/javascript/display.js"></script>
 <script src="../generators/javascript/leds.js"></script>
@@ -69,6 +70,7 @@
 <script src="../blocks/variables_dynamic.js"></script>
 <script src="../blocks/procedures.js"></script>
 <script src="../blocks/motors.js"></script>
+<script src="../blocks/time.js"></script>
 <script src="../blocks/sensors.js"></script>
 <script src="../blocks/display.js"></script>
 <script src="../blocks/leds.js"></script>
@@ -415,10 +417,14 @@ h1 {
     </category>
     <category name="sensors and buttons" colour="160">
       <block type="light_sensor_value"></block>
+      <block type="line_sensor_value"></block>
       <block type="button_press"></block>
     </category>
     <category name="display" colour="230">
       <block type="display_message"></block>
+    </category>
+    <category name="time" colour="330">
+      <block type="continue"></block>
     </category>
     <category name="Logic" colour="%{BKY_LOGIC_HUE}">
       <block type="controls_if"></block>

@@ -34,33 +34,43 @@
                       </block>
                     </value>
                     <next>
-                      <block type="display_message" id=".;~g9]c9aSX@(FMyzc`9">
-                        <value name="MESSAGE">
-                          <block type="text" id="D)Y|zSVu_rv7t^4+:$xh">
-                            <field name="TEXT">Sup</field>
+                      <block type="variables_set" id="k/A2j0R+Mm+?LYE(Uq+0">
+                        <field name="VAR" id="xyU[WYTytR`!H9r1MgTl">a</field>
+                        <value name="VALUE">
+                          <block type="line_sensor_value" id="4n6]FfmVD=lV!o![66gg">
+                            <field name="SENSOR">LEFT</field>
                           </block>
                         </value>
                         <next>
-                          <block type="display_message" id="/0X/U%uUbEL)q5]qdCE:">
+                          <block type="display_message" id=".;~g9]c9aSX@(FMyzc`9">
                             <value name="MESSAGE">
-                              <block type="math_number" id="}Y(.fb%J_:7kvf)f;udN">
-                                <field name="NUM">123</field>
+                              <block type="text" id="D)Y|zSVu_rv7t^4+:$xh">
+                                <field name="TEXT">Sup</field>
                               </block>
                             </value>
                             <next>
-                              <block type="display_message" id="Og6IBD%47uh%jow82I]F">
+                              <block type="display_message" id="/0X/U%uUbEL)q5]qdCE:">
                                 <value name="MESSAGE">
-                                  <block type="logic_boolean" id="KU#[(6M0?Gx/lgzTux#*">
-                                    <field name="BOOL">TRUE</field>
+                                  <block type="math_number" id="}Y(.fb%J_:7kvf)f;udN">
+                                    <field name="NUM">123</field>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="display_message" id="_3EPhV8yZ4t}Jz*PeZzO">
+                                  <block type="display_message" id="Og6IBD%47uh%jow82I]F">
                                     <value name="MESSAGE">
-                                      <block type="variables_get" id="`clK%Ak-Z#-Y=1Q?:E)e">
-                                        <field name="VAR" id="xyU[WYTytR`!H9r1MgTl">a</field>
+                                      <block type="logic_boolean" id="KU#[(6M0?Gx/lgzTux#*">
+                                        <field name="BOOL">TRUE</field>
                                       </block>
                                     </value>
+                                    <next>
+                                      <block type="display_message" id="_3EPhV8yZ4t}Jz*PeZzO">
+                                        <value name="MESSAGE">
+                                          <block type="variables_get" id="`clK%Ak-Z#-Y=1Q?:E)e">
+                                            <field name="VAR" id="xyU[WYTytR`!H9r1MgTl">a</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
