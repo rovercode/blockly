@@ -41,6 +41,12 @@ Blockly.JavaScript['light_sensor_value'] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
+Blockly.JavaScript['line_sensor_value'] = function(block) {
+  var dropdown_sensors = block.getFieldValue('SENSOR');
+  var code = "getLineSensorValue('" + dropdown_sensors + "')";
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
 Blockly.JavaScript['button_press'] = function(block) {
   var dropdown_button = block.getFieldValue('BUTTON');
   var code = "buttonHasBeenPressed('" + dropdown_button + "')";

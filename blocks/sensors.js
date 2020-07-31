@@ -61,6 +61,18 @@ Blockly.Blocks['light_sensor_value'] = {
   }
 };
 
+Blockly.Blocks['line_sensor_value'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown([["left","LEFT"], ["right","RIGHT"]]), "SENSOR")
+        .appendField("line sensor value");
+    this.setOutput(true, "Number");
+    this.setTooltip("Get the brightness value from a line sensor. 0 is darkest; 1023 is brightest.");
+    this.setColour(Blockly.Blocks.sensors.HUE);
+    this.setHelpUrl("https://docs.rovercode.com/blocks/line-sensor-value");
+  }
+};
+
 Blockly.Blocks['button_press'] = {
   init: function() {
     this.appendDummyInput()
