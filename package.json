@@ -1,16 +1,16 @@
 {
-  "name": "blockly",
-  "version": "3.20200625.2",
+  "name": "@rovercode/blockly",
+  "version": "1.0.0",
   "description": "Blockly is a library for building visual programming editors.",
   "keywords": [
     "blockly"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/google/blockly.git"
+    "url": "https://github.com/rovercode/blockly.git"
   },
   "bugs": {
-    "url": "https://github.com/google/blockly/issues"
+    "url": "https://github.com/rovercode/blockly/issues"
   },
   "homepage": "https://developers.google.com/blockly/",
   "author": {
